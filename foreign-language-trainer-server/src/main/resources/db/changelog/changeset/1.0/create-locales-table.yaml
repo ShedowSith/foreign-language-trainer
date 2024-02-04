@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: locales-table
+      author: admin
+      changes:
+        - createTable:
+            tableName: locales
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: caption
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(6)
+                  constraints:
+                    nullable: false

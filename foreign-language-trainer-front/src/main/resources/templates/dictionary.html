@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Тренажер иностранных языков</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/webjars/bootstrap/5.3.0/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/bootstrap/5.3.0/js/bootstrap.bundle.min.js}"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                 class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"></path>
+                <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"></path>
+            </svg>
+            <span class="fs-4">Твой тренажер иностранных языков</span>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/locales" class="nav-link px-2 link-secondary" aria-current="page">Языки</a></li>
+            <li><a href="/dictionaries" class="nav-link px-2 link-secondary" aria-current="page">Словари</a></li>
+        </ul>
+    </header>
+</div>
+<div class="container">
+    <h1 class="display-6"
+        th:utext="'Словарь: '+${dictionary.name}+'('+${dictionary.sourceLocale.caption}+'-'+${dictionary.targetLocale.caption}+')'">
+        Словарь</h1>
+
+    <form class="row g-3" th:action="@{/dictionaries/{dictionaryId}/translations(dictionaryId=${dictionary.id})}"
+          th:object="${translation}" method="post">
+        <div class="col-md-6">
+            <label for="inputWord" class="form-label">Слово</label>
+            <input type="text" class="form-control" id="inputWord" required th:field="*{word}">
+        </div>
+        <div class="col-md-6">
+            <label for="inputTranslation" class="form-label">Перевод</label>
+            <div class="input-group">
+                <button id="buttonTranslate" th:name="${dictionary.id}" type="button" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-translate" viewBox="0 0 16 16">
+                        <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"></path>
+                        <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"></path>
+                    </svg>
+                </button>
+                <input type="text" class="form-control" id="inputTranslation" required th:field="*{translation}">
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Добавить</button>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Слово</th>
+            <th scope="col">Перевод</th>
+            <th scope="col">Изучено</th>
+            <th scope="col">Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="tr-translation" th:each="value, state: ${dictionary.translations}">
+            <th th:utext="${state.count}" scope="row">count</th>
+            <td class="word" th:id="'word-'+${value.id}" th:utext="${value.word}">word</td>
+            <td class="translation" th:id="'translation-'+${value.id}" th:utext="${value.translation}">translation</td>
+            <td>
+                <!-- IF  -->
+                <div th:if="${value.isStudied}">
+                    <div class="form-check form-switch">
+                        <input class='is-studied form-check-input' th:id="${value.id}" type='checkbox' checked>
+                    </div>
+                </div>
+                <!-- ELSE -->
+                <div th:unless="${value.isStudied}">
+                    <div class="form-check form-switch">
+                        <input class='is-studied form-check-input' th:id="${value.id}" type='checkbox'>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <button class='btn btn-primary' th:id="'change-'+${value.id}" name="change" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" th:data-bs-whatever="${value.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-pencil" viewBox="0 0 16 16">
+                        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    </svg>
+                </button>
+                <button class='btn btn-primary' th:id="'delete-'+${value.id}" name="delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                    </svg>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Редактирование</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="modalInputWord" class="col-form-label">Слово:</label>
+                        <input type="text" class="form-control" id="modalInputWord">
+                    </div>
+                    <div class="mb-3">
+                        <label for="modalInputTranslation" class="col-form-label">Перевод:</label>
+                        <input type="text" class="form-control" id="modalInputTranslation">
+                    </div>
+                    <div class="form-check form-switch">
+                        <label for="modalСheckbox" class="col-form-label">Состояние:</label>
+                        <input class="is-studied form-check-input" id="modalСheckbox" type='checkbox' checked>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button id="modalButtonChange" type="button" class="btn btn-primary" data-bs-dismiss="modal">Изменить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('table').on('change', 'input[type=checkbox]', function () {
+        let id = this.id
+        let dataObj = {
+            isStudied: this.checked
+        }
+        fetch('/translations/' + id, {
+            method: 'PUT',
+            body: JSON.stringify(dataObj),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
+    });
+
+    $('#buttonTranslate').on('click', async function () {
+        let id = this.name
+
+        let word = $("#inputWord")
+
+        let dataObj = {
+            dictionaryId: id,
+            word: word.val()
+        }
+        let response = await fetch('/translations/auto', {
+            method: 'POST',
+            body: JSON.stringify(dataObj),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
+
+        if (response.ok) {
+           response.text().then(value => $("#inputTranslation").val(value))
+        } else {
+            alert("Ошибка авто перевода.");
+        }
+    });
+
+    $('#modalButtonChange').on('click', function () {
+        let id = this.name.split('-')[1]
+
+        let word = $("#modalInputWord")
+        let translation = $("#modalInputTranslation")
+        let check = $("#modalСheckbox")
+
+        $("#word-" + id).text(word.val())
+        $("#translation-" + id).text(translation.val())
+        $("#" + id).prop('checked', check.prop('checked'))
+        let dataObj = {
+            word: word.val(),
+            translation: translation.val(),
+            isStudied: check.prop('checked')
+        }
+        fetch('/translations/' + id, {
+            method: 'PUT',
+            body: JSON.stringify(dataObj),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+        })
+    });
+
+    $('table').on('click', 'button[name=delete]', async function () {
+        let id = this.id.split('-')[1]
+        let response = await fetch('/translations/' + id, {
+            method: 'DELETE'
+        })
+        if (response.ok) {
+            location.reload();
+        } else {
+            alert("Ошибка удаления, попробуйте еще раз!");
+        }
+
+    });
+    let exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+        let button = event.relatedTarget
+        let id = button.getAttribute('data-bs-whatever')
+
+        let word = $("#word-" + id)
+        let translation = $("#translation-" + id)
+        let check = $("#" + id)
+
+        $("#modalInputWord").val(word.text())
+        $("#modalInputTranslation").val(translation.text())
+        $("#modalButtonChange").attr('name', "modalButtonChange-" + id)
+        $("#modalСheckbox").prop('checked', check.prop('checked'))
+    })
+</script>
+</html>

@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+google:
+  url: "https://translate.google.com/translate_a/t?client=dict-chrome-ex"
+  headers:
+    Accept: "text/html,application/xhtml+xm?ml;q=0.9,image/webp,*/*;q=0.8"
+    #    Accept-Encoding: "gzip, deflate, br"
+    Connection: "keep-alive"
+    Cookie: "BL_D_PROV=; BL_T_PROV=Google"
+    Host: "translate.googleapis.com"
+    Referer: "https://translate.google.com/"
+    TE: "Trailers"
+    Upgrade-Insecure-Requests: "1"
+    "User-Agent":
+  params:
+    dt: "t"
+    dj: "1"

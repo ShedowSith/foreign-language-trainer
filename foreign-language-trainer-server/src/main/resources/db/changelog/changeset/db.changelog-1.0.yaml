@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: 1.0/create-locales-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 1.0/create-dictionaries-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 1.0/create-translation-table.yaml
+      relativeToChangelogFile: true

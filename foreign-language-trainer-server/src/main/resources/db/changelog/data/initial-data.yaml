@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: initial-data
+      author: admin
+      changes:
+        - insert:
+            tableName: locales
+            columns:
+              - column:
+                  name: caption
+                  value: "Английский"
+              - column:
+                  name: code
+                  value: "en"
+        - insert:
+            tableName: locales
+            columns:
+              - column:
+                  name: caption
+                  value: "Русский"
+              - column:
+                  name: code
+                  value: "ru"

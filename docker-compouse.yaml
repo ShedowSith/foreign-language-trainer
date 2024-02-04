@@ -1,0 +1,51 @@
+version: '3.1'
+
+services:
+  front:
+    build: ./foreign-language-trainer-front
+    container_name: front
+    ports:
+      - "80:80"
+    volumes:
+      - ./foreign-language-trainer-front/config/application.properties:/app/config/application.properties
+    networks:
+      - proxy.front-network
+  server:
+    build: ./foreign-language-trainer-server
+    container_name: server
+    links:
+      - db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./foreign-language-trainer-server/config/application-prod.properties:/app/config/application.properties
+    environment:
+      POSTGRESQL_DATABASE: foreign-language-trainer
+      POSTGRESQL_USERNAME: root
+      POSTGRESQL_PASSWORD: root
+    networks:
+      - proxy.front-network
+
+  api:
+    build: ./translation-server
+    container_name: translation
+    volumes:
+      - ./translation-server/config/application.yml:/app/config/application.yml
+    networks:
+      - proxy.front-network
+  db:
+    image: 'bitnami/postgresql:15'
+    ports:
+      - "5432:5432"
+    container_name: db
+    environment:
+      POSTGRESQL_DATABASE: foreign-language-trainer
+      POSTGRESQL_USERNAME: root
+      POSTGRESQL_PASSWORD: root
+    networks:
+      - proxy.front-network
+volumes:
+  db_data: {}
+
+networks:
+  proxy.front-network:
+    driver: bridge

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0e01d6ce-f969-4f20-b02d-ad31c9712536" name="Changes" comment="Тренажер иностранных языков">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$/translation-server" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ShedowSith"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="207e063b-7a39-4b2d-b469-4ad5e9a13e8a" />
+        <option name="url" value="https://github.com/ShedowSith/foreign-language-trainer.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2bDGWPc4gND2iUVNJgaStlWMC4Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "develop",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "C:/Users/ShadowSith/IdeaProjects/foreign-language-trainer/foreign-language-trainer-front/src/test/kotlin/ru/shadowsith/foreignlanguagetrainerfront",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\foreign-language-trainer-front\src\test\kotlin\ru\shadowsith\foreignlanguagetrainerfront" />
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\foreign-language-trainer-server\src\main\resources" />
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\foreign-language-trainer-front" />
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\translation-server" />
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\foreign-language-trainer-server\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ShadowSith\IdeaProjects\foreign-language-trainer\foreign-language-trainer-front\src\main\resources\static" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="ru.shadowsith.translationserver.services" />
+      <recent name="ru.shadowsith.translationserver.client" />
+      <recent name="ru.shadowsith.foreignlanguagetrainerfront.services" />
+      <recent name="ru.shadowsith.foreignlanguagetrainerserver.services" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="ru.shadowsith.translationserver.configuration" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.shadowsith.foreignlanguagetrainerfront.controllers" />
+      <recent name="ru.shadowsith.foreignlanguagetrainerserver.controllers" />
+      <recent name="ru.shadowsith.translationserver.controller" />
+      <recent name="ru.shadowsith.translationserver.services" />
+      <recent name="ru.shadowsith.translationserver.client" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="ru.shadowsith.foreignlanguagetrainerfront.dto" />
+      <recent name="ru.shadowsith.foreignlanguagetrainerfront.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.docker-compouse.yaml: Compose Deployment">
+    <configuration name="TranslationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foreign-language-trainer-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.TranslationControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationControllerTest.autoTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foreign-language-trainer-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.TranslationControllerTest" />
+      <option name="METHOD_NAME" value="autoTranslation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationControllerTest.deleteTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foreign-language-trainer-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.TranslationControllerTest" />
+      <option name="METHOD_NAME" value="deleteTranslation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationControllerTest.updateTranslation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foreign-language-trainer-front" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers" />
+      <option name="MAIN_CLASS_NAME" value="ru.shadowsith.foreignlanguagetrainerfront.controllers.TranslationControllerTest" />
+      <option name="METHOD_NAME" value="updateTranslation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForeignLanguageTrainerFrontApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local-dev" />
+      <module name="foreign-language-trainer-front" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.shadowsith.foreignlanguagetrainerfront.ForeignLanguageTrainerFrontApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ForeignLanguageTrainerServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local-dev" />
+      <module name="foreign-language-trainer-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.shadowsith.foreignlanguagetrainerserver.ForeignLanguageTrainerServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TranslationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local-dev" />
+      <module name="translation-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.shadowsith.translationserver.TranslationServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compouse.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compouse.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compouse.yaml: Compose Deployment" />
+      <item itemvalue="JUnit.TranslationControllerTest" />
+      <item itemvalue="JUnit.TranslationControllerTest.autoTranslation" />
+      <item itemvalue="JUnit.TranslationControllerTest.deleteTranslation" />
+      <item itemvalue="JUnit.TranslationControllerTest.updateTranslation" />
+      <item itemvalue="Spring Boot.ForeignLanguageTrainerFrontApplication" />
+      <item itemvalue="Spring Boot.ForeignLanguageTrainerServerApplication" />
+      <item itemvalue="Spring Boot.TranslationServerApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TranslationControllerTest.updateTranslation" />
+        <item itemvalue="JUnit.TranslationControllerTest.deleteTranslation" />
+        <item itemvalue="JUnit.TranslationControllerTest.autoTranslation" />
+        <item itemvalue="JUnit.TranslationControllerTest" />
+        <item itemvalue="Docker.docker-compouse.yaml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0e01d6ce-f969-4f20-b02d-ad31c9712536" name="Changes" comment="" />
+      <created>1705742268855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705742268855</updated>
+      <workItem from="1705742269929" duration="35293000" />
+      <workItem from="1705815815296" duration="73868000" />
+      <workItem from="1706438704375" duration="23781000" />
+      <workItem from="1706641456005" duration="8087000" />
+      <workItem from="1706810941807" duration="8878000" />
+      <workItem from="1706822073075" duration="383000" />
+      <workItem from="1706884670549" duration="1925000" />
+      <workItem from="1706943833362" duration="17040000" />
+      <workItem from="1707071787712" duration="4414000" />
+    </task>
+    <task id="LOCAL-00001" summary="Тренажер иностранных языков">
+      <option name="closed" value="true" />
+      <created>1707071994010</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707071994010</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Тренажер иностранных языков">
+      <option name="closed" value="true" />
+      <created>1707072418320</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707072418320</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/foreign-language-trainer-front" />
+      <path value="$PROJECT_DIR$/foreign-language-trainer-server" />
+      <path value="$PROJECT_DIR$/translation-server" />
+    </ignored-roots>
+    <MESSAGE value="Тренажер иностранных языков" />
+    <option name="LAST_COMMIT_MESSAGE" value="Тренажер иностранных языков" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/translation-server/src/test/kotlin/ru/shadowsith/translationserver/controller/TranslateControllerTest.kt</url>
+          <line>72</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
