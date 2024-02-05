@@ -11,6 +11,7 @@ import org.springframework.boot.test.web.server.LocalServerPort
 import org.springframework.http.*
 import org.springframework.test.context.ActiveProfiles
 import ru.shadowsith.foreignlanguagetrainerserver.model.Locale
+import ru.shadowsith.foreignlanguagetrainerserver.repositories.DictionaryRepository
 import ru.shadowsith.foreignlanguagetrainerserver.repositories.LocaleRepository
 import java.net.URI
 import kotlin.jvm.optionals.getOrNull
@@ -28,8 +29,12 @@ class LocaleControllerTest {
     @Autowired
     private lateinit var localeRepository: LocaleRepository
 
+    @Autowired
+    private lateinit var dictionaryRepository: DictionaryRepository
+
     @AfterEach
     fun after() {
+        dictionaryRepository.deleteAll()
         localeRepository.deleteAll()
     }
 
